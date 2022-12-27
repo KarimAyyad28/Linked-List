@@ -136,7 +136,7 @@ return;
 void edt(){
     if (!Header) {cout <<"Linked List is empty \n"; return;}
     LinkedList *newPtr;
-    int value;
+    float value;
     cout <<"Enter the value : \n";
     cin >> value;
     cout << "Which node do you want to delete ?\n 1  the beginning \n 2 in the middle \n 3 the last\n";
