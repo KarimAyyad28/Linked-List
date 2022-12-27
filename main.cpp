@@ -40,7 +40,7 @@ void add()
     float x;
     LinkedList *newNode,*newPtr;
     newNode = new LinkedList;
-    cout << "Enter the value : "<<endl;
+    cout << "Enter the value : \n" ;
     cin >> x;
     newNode->data = x;
     newNode->Next=NULL;
@@ -102,13 +102,15 @@ void dlt(){
     cin >> ch;
     switch (ch)
     {case 1 :
-            {   Header= Header->Next;
+            {   newPtr1= Header;
+                Header= Header->Next;
+                delete newPtr1;
                 cout << "Deleting done\n";
                 return;
             }
-     case 2:
+     case 2 :
             {   int pos;
-                cout << " Which node do you like to add ? \n";
+                cout << " Which node do you like to delete ? \n";
                 cin >> pos;
                 pos--;
                 newPtr1 = Header;
@@ -127,7 +129,7 @@ void dlt(){
                 }
                 newPtr2->Next=NULL;
                 delete newPtr1;
-                cout << "Adding to the end done\n";
+                cout << "Deleting to the end done\n";
                 break;
             }
     }
@@ -136,10 +138,10 @@ return;
 void edt(){
     if (!Header) {cout <<"Linked List is empty \n"; return;}
     LinkedList *newPtr;
-    float value;
+    int value;
     cout <<"Enter the value : \n";
     cin >> value;
-    cout << "Which node do you want to delete ?\n 1  the beginning \n 2 in the middle \n 3 the last\n";
+    cout << "Which node do you want to edit ?\n 1  the beginning \n 2 in the middle \n 3 the last\n";
     int ch;
     cin >> ch;
     switch (ch)
@@ -150,7 +152,7 @@ void edt(){
         }
         case 2:
         {   int pos;
-            cout << " Which node do you like to add ? \n";
+            cout << " Which node do you like to edit ? \n";
             cin >> pos;
             pos--;
             newPtr = Header;
