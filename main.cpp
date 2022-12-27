@@ -45,7 +45,7 @@ void add()
     newNode->data = x;
     newNode->Next=NULL;
     if (!Header)
-    {Header = newNode; cout << "Done\n";}
+    {Header = newNode; cout << "Addition done\n";}
     else {
         cout << "Where do you want to add it ?\n 1 in the beginning \n 2 in the middle \n 3 in the end\n";
         cin >> ch;
@@ -129,7 +129,7 @@ void dlt(){
                 }
                 newPtr2->Next=NULL;
                 delete newPtr1;
-                cout << "Deleting to the end done\n";
+                cout << "Deleting done\n";
                 break;
             }
     }
